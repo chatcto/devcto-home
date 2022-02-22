@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { baseUrl } from './config';
-import { CODE_MESSAGE } from '../consts/statusCode';
+import { CODE_MESSAGE } from '@/consts/statusCode';
 import { nodeAddToken } from './index';
 
 axios.defaults.withCredentials = false;

@@ -13,7 +13,8 @@ console.info(
 const urlEnv = {
   prod: 'https://api.devcto.com',
   dev: 'https://testapi.devcto.com',
-  test: 'https://testapi.devcto.com'
+  test: 'https://testapi.devcto.com',
+  undefined: 'https://api.devcto.com'
 };
 
 export const baseUrl = urlEnv[currentEnv] || defualtUrl;
