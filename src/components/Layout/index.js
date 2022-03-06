@@ -53,7 +53,7 @@ function Layout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="container">
+      <div>
         <Header/>
       <div className="w-full flex flex-col sm:flex-row flex-grow overflow-hidden">
     <div className="sm:w-1/5 md:1/4 w-full flex-shrink flex-grow-0 p-4">

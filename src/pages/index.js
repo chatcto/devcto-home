@@ -10,7 +10,7 @@ export default function Home({ userAgent, contentData, catData, cid, total }) {
 
   // console.log('contentData', contentData);
   return (
-    <div className={'container', styles.container}>
+    <div className={styles.container}>
       <Layout sideData={catData.navList}>
             <div className={"columns-3xs  grid-cols-4 gap-4 font-mono  text-sm text-center font-bold leading-6 bg-stripes-fuchsia rounded-lg"}>
               {

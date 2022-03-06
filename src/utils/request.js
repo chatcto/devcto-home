@@ -12,6 +12,7 @@ axios.defaults.isCustomHeaders = true; // 是否拦截器重置请求头
 // 中间件 拦截请求-
 axios.interceptors.response.use(
   response => {
+    console.log('response',response);
     if (response.isCustomHeaders) {
       // config.headers.Authorization = 'token';
     }
@@ -22,7 +23,7 @@ axios.interceptors.response.use(
 
     const res = err.response;
     if (CODE_MESSAGE[res?.status]) {
-      console.error(`${CODE_MESSAGE[res?.status]}`);
+      console.error(`${CODE_MESSAGE[res?.status]}`,res);
     }
   }
 );
@@ -58,6 +59,7 @@ axios.interceptors.request.use(
 );
 
 const safeRequest = (url, options) => {
+  console.log('url',url,options);
   return new Promise((resolve, reject) => {
     axios({
       method: 'GET',
@@ -68,6 +70,7 @@ const safeRequest = (url, options) => {
         resolve(res?.data);
       },
       err => {
+        console.log('err',err);
         reject(err);
       }
     );

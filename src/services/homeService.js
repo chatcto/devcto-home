@@ -6,6 +6,7 @@ import { baseUrl } from '../utils/config';
  * https://文档链接
  */
 export const getContentList = async payload => {
+  let params = Object.assign(payload,{pageSize: 10})
   return request.post(`${baseUrl}/v1/service/news/list`, payload);
 };
 
