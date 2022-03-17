@@ -31,11 +31,7 @@ export default function Home ({
       cid: cid || activeMenuItem
     }).then((resx)=>{
       console.log(555,resx);
-      // res
-      console.log('xxxx',list)
-      console.log('yyyy',resx.data.records)
-      let obj = Object.assign(list,resx.data.records)
-      console.log('zzz',obj);
+      setList([list,...resx.data.records])
       setCurpage(curpage + 1)
     })
   }
@@ -54,7 +50,7 @@ export default function Home ({
               list.map((item, index) => {
                 return (
                   <div
-                    className={'w-60 h-90 mt-6 rounded-lg shadow-lg'}
+                    className={'w-60 h-90 mb-6 rounded-lg shadow-lg h-full overflow-auto'}
                     key={index}
                   >
                     <Image
